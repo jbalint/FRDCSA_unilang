@@ -7,12 +7,12 @@ use namespace::autoclean;
 
 use Org::FRDCSA::Platform::Log;
 
-with 'Org::FRDCSA::UniLang::Agent::MessageProcessingAgent';
-
 has 'name' => ( is => 'ro', default => 'Echo' );
 
+with 'Org::FRDCSA::UniLang::Agent::MessageProcessingAgent';
+
 has 'logger' =>
-  ( is => 'ro', default => sub { Org::FRDCSA::Platform::Log->getLogger() } );
+  ( is => 'ro', default => sub { Org::FRDCSA::Platform::Log->getLogger } );
 
 =pod
 
