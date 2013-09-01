@@ -5,6 +5,6 @@ package Org::FRDCSA::UniLang::Agent::Agent;
 use Moose::Role;
 use namespace::autoclean;
 
-has 'name' => ( is => 'ro', isa => 'Str', );
+requires 'name';
 
 1;
