@@ -71,7 +71,7 @@ sub get_one {
 
 sub get_pending {
     my $self = shift;
-    return $self->buffer eq "" ? [] : [ $self->buffer ];
+    return $self->buffer eq "" ? undef : [ $self->buffer ];
 }
 
 __PACKAGE__->meta->make_immutable;
