@@ -71,4 +71,6 @@ is( $message->{inReplyTo},  undef );
 # make sure buffer is NOT empty
 ok( $filter->get_pending->[0] =~ m#^<message>.*</sen#ms );
 
+# TODO test with two messages
+
 done_testing();

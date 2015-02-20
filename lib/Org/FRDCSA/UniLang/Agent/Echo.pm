@@ -21,6 +21,8 @@ has 'logger' =>
 =cut
 
 sub startup {
+    my $self = shift;
+    $self->logger->debug("startup... ");
 }
 
 =pod
@@ -30,6 +32,8 @@ sub startup {
 =cut
 
 sub shutdown {
+    my $self = shift;
+    $self->logger->debug("shutdown... ");
 }
 
 =pod
@@ -39,6 +43,9 @@ sub shutdown {
 =cut
 
 sub processMessage {
+    my ( $self, $message ) = @_;
+    $self->logger->debug("Processing a message... ");
+    print "Got a message! ", $message;
 }
 
 __PACKAGE__->meta->make_immutable;
